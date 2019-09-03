@@ -23,7 +23,6 @@ Component({
     onLikeTap(event) {
       let count = this.properties.count
       let isLike = this.properties.isLike
-      console.log(count, isLike)
       if (!isLike) {
         this.setData({
           count: count + 1,
