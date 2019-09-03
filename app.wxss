@@ -1,0 +1,4 @@
+page {
+  font-weight: 100;
+  font-size: 32rpx;
+}
