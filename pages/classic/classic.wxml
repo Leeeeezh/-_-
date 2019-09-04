@@ -1,1 +1,11 @@
-<comp-like />
+<view class="container">
+  <view class="header">
+    <comp-episode class="episode" _index="{{classicData.index}}" />
+    <view class="btns">
+      <comp-like class="like" count="{{classicData.fav_nums}}" isLike="{{classicData.like_status?true:false}}" bind:hearttap="onHeartTap" />
+      <image class="share" src="../../images/share.png"></image>
+    </view>
+  </view>
+  <comp-movie imageURL="{{classicData.image}}" content="{{classicData.content}}" />
+  <comp-handler title="{{classicData.title}}" />
+</view>

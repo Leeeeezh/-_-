@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "comp-like": "../../components/like/index"
+    "comp-like": "../../components/like/index",
+    "comp-movie": "../../components/classic/movie/index",
+    "comp-episode": "../../components/episode/index",
+    "comp-handler": "../../components/classic/handler"
   }
 }

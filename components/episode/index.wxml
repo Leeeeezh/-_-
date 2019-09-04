@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="index">
+    <text>No.</text>
+    <text class="no">{{index}}</text>
+  </view>
+  <view class="line"></view>
+  <view class="date">
+    <text>{{month}}月</text>
+    <text>{{year}}</text>
+  </view>
+</view>

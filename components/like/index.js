@@ -2,17 +2,11 @@ Component({
   properties: {
     count: {
       type: Number,
-      value: 0,
-      observer: function () {
-
-      }
+      value: 0
     },
     isLike: {
       type: Boolean,
-      value: false,
-      observer: function () {
-
-      }
+      value: false
     }
   },
   data: {
@@ -34,6 +28,11 @@ Component({
           isLike: false
         })
       }
+      //  向上触发自定义事件
+      let behavior = this.properties.isLike?'like':'dislike'
+      this.triggerEvent('hearttap',{
+        behavior
+      },{})
     }
   }
 })

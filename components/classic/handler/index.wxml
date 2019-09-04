@@ -1,0 +1,5 @@
+<view class="container">
+  <image class="prev" src="./images/arrow_solid.png"></image>
+  <text class="title">{{title}}</text>
+  <image class="next" src="./images/arrow_solid.png"></image>
+</view>

@@ -1,0 +1,38 @@
+.container {
+  width: 660rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  margin: 100rpx 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+image {
+  width: 80rpx;
+  height: 80rpx;
+  transition: 0.2s ease-in-out;
+}
+
+.next:active {
+  transform: scale(1.1, 1.1);
+}
+
+.prev {
+  transform: rotateZ(180deg);
+}
+
+.prev:active {
+  transform: scale(1.1, 1.1) rotateZ(180deg);
+}
+
+.title {
+  display: inline-block;
+  max-width: 400rpx;
+  color: #333;
+  text-shadow: 0 0 2rpx #ccc;
+  font-size: 40rpx;
+  font-weight: bold;
+}

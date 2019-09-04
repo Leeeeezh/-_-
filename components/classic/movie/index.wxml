@@ -1,0 +1,9 @@
+<view class="classic-container">
+  <image class="classic-image" src="{{imageURL}}"></image>
+  <image class="tag" src="images/movie.png"></image>
+  <view class="text-container">
+    <image src="images/quotation.png"></image>
+    <text class="content">{{content}}</text>
+    <image src="images/quotation.png"></image>
+  </view>
+</view>
