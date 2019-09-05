@@ -38,3 +38,10 @@
   width: 30rpx;
   height: 30rpx;
 }
+
+.handler {
+  position: fixed;
+  bottom:100rpx;
+  left: 375rpx;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,44 @@
+.classic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.classic-image {
+  width: 720rpx;
+  height: 480rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 30px 10rpx -30rpx rgba(0, 0, 0, 0.2);
+}
+
+.tag {
+  width: 46rpx;
+  height: 142rpx;
+  position: relative;
+  right: 300rpx;
+  bottom: 60rpx;
+}
+
+.content {
+  display: inline-block;
+  max-width: 550rpx;
+  text-align: center;
+  font-size: 36rpx;
+  padding: 12rpx;
+  border-radius: 12rpx;
+  background-color: beige;
+  text-shadow: 0 0 2rpx #ccc;
+}
+
+.text-container image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.text-container image:first-child {
+  transform: translate(50%, -100%);
+}
+
+.text-container image:last-child {
+  transform: translate(-50%, 100%) rotate(180deg);
+}

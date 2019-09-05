@@ -6,4 +6,4 @@
     <text class="content">{{content}}</text>
     <image src="../../../images/quotation.png"></image>
   </view>
-</view>  
+</view>

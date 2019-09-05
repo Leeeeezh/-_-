@@ -22,6 +22,15 @@ function getClassicData(currentIndex, position, callback) {
     }
   })
 }
+//获取点赞数据
+function getLikeData(type, id, callback) {
+  http.request({
+    url: `/classic/${type}/${id}/favor`,
+    success: res => {
+      callback && callback(res)
+    }
+  })
+}
 
 //读缓存
 function loadClassic(index) {
@@ -43,5 +52,6 @@ function _saveClassic(res) {
 export {
   getLatestClassicData,
   getClassicData,
+  getLikeData,
   loadClassic
 }

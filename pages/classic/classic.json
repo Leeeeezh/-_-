@@ -2,6 +2,8 @@
   "usingComponents": {
     "comp-like": "../../components/like/index",
     "comp-movie": "../../components/classic/movie/index",
+    "comp-music": "../../components/classic/music/index",
+    "comp-essay": "../../components/classic/essay/index",
     "comp-episode": "../../components/episode/index",
     "comp-handler": "../../components/classic/handler"
   }

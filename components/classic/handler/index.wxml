@@ -1,5 +1,5 @@
 <view class="container">
-  <image class="prev" src="./images/arrow_solid.png"></image>
+  <image class="prev" src="{{latest?disactiveArrowSrc:activeArrowSrc}}" bind:tap="onNextTap"></image>
   <text class="title">{{title}}</text>
-  <image class="next" src="./images/arrow_solid.png"></image>
+  <image class="next" src="{{earliest?disactiveArrowSrc:activeArrowSrc}}" bind:tap="onPrevTap"></image>
 </view>

@@ -1,5 +1,8 @@
 <view class="classic-container">
-  <image class="classic-image" src="{{imageURL}}"></image>
+  <view class="disk">
+    <image class="play-btn" src="{{isPlaying?playingSrc:standbySrc}}" bind:tap="onPlayTap"></image>
+    <image class="classic-image {{isPlaying?'rotation':''}}" src="{{imageURL}}"></image>
+  </view>
   <image class="tag" src="images/tag.png"></image>
   <view class="text-container">
     <image src="../../../images/quotation.png"></image>

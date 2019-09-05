@@ -1,0 +1,53 @@
+@import '../../styles/common.wxss';
+
+.disk {
+  position: relative;
+}
+
+.classic-image {
+  width: 500rpx;
+  height: 500rpx;
+  border-radius: 50%;
+}
+
+.play-btn {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  transform-origin: 50% 50%;
+}
+
+.classic-image {
+  box-shadow: 0 0 30rpx #aaa;
+  border: 4rpx solid palegoldenrod;
+}
+
+.rotation {
+  animation: rotation 30s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

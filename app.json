@@ -1,11 +1,13 @@
 {
   "pages": [
-    "pages/classic/classic"
+    "pages/classic/classic",
+    "pages/books/books",
+    "pages/collections/collections"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "简·拣",
+    "navigationBarTitleText": "拣·时光",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json"
