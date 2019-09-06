@@ -1,0 +1,12 @@
+<view class="container">
+  <!-- <label for="book"> -->
+    <view class="search">
+      <view class="wrap">
+        <image class="searchIcon" src="images/search.png" />
+        <input name="book" placeholder="搜索图书" bind:tap="activateSearchPanel"></input>
+      </view>
+      <image class="clearIcon" hidden="{{!isSearching}}" src="images/cancel.png" bind:tap="activateSearchPanel"/>
+    </view>
+    <view class="cancel" hidden="{{!isSearching}}" bind:tap="deactivateSearchPanel">取消</view>
+  <!-- </label> -->
+</view>

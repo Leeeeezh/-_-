@@ -86,7 +86,6 @@ Page({
   // 页面加载时获取最新期刊
   onLoad: function(options) {
     getLatestClassicData(res => {
-      console.table(res.data)
       this.setData({
         ...res.data,
         latestIndex: res.data.index

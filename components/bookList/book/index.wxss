@@ -1,0 +1,53 @@
+.container {
+  width:300rpx;
+  height:450;
+  border-radius:6rpx;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+  /* box-shadow: 0 0 10rpx #eee; */
+  position: relative;
+  box-shadow: 30rpx 0 0 -18rpx rgb(236, 234, 202);
+  overflow: hidden;
+}
+
+image{
+  width:300rpx;
+  height:450rpx;
+}
+
+.desc {
+  box-sizing: border-box;
+  padding:10rpx;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+
+.title{
+  font-weight: bold;
+  color: #333;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.author {
+  font-size: 26rpx;
+  color: #555;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fav {
+  padding-top: 10rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color: #555;
+}

@@ -1,2 +1,14 @@
-<!--pages/books/books.wxml-->
-<text>pages/books/books.wxml</text>
+<view class="container">
+  <view class="searchBar">
+    <comp-search/>
+  </view>
+  <view class="books">
+    <view class="titleWrap">
+      <text class="title">热门</text>
+    </view>
+    <block wx:key="id" wx:for="{{bookList}}" class="block">
+      <comp-book bookInfo="{{item}}" />
+    </block>
+  </view>
+  <view class="bottom"></view>
+</view>

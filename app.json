@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/classic/classic",
     "pages/books/books",
-    "pages/collections/collections"
+    "pages/classic/classic",
+    "pages/collections/collections",
+    "pages/bookDetail/bookDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,5 +11,29 @@
     "navigationBarTitleText": "拣·时光",
     "navigationBarTextStyle": "white"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#d6ad88",
+    "list": [
+      {
+        "text": "日报",
+        "pagePath": "pages/classic/classic",
+        "iconPath": "images/tab/daily_unchecked.png",
+        "selectedIconPath": "images/tab/daily.png"
+      },
+      {
+        "text": "书单",
+        "pagePath": "pages/books/books",
+        "iconPath": "images/tab/books_unchecked.png",
+        "selectedIconPath": "images/tab/books.png"
+      },
+      {
+        "text": "收藏",
+        "pagePath": "pages/collections/collections",
+        "iconPath": "images/tab/collections_unchecked.png",
+        "selectedIconPath": "images/tab/collections.png"
+      }
+    ]
+  }
 }
