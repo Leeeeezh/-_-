@@ -1,4 +1,6 @@
-<view class="container">
+<wxs src="../../utils/filter.wxs" module="filter" />
+
+<view class="container {{isInputPanelShow?'mask':''}}">
   <view class="basicInfo module">
     <image class="cover" src="{{detail.image}}"></image>
     <text class="bookTitle">{{detail.title}}</text>
@@ -11,7 +13,9 @@
     </view>
     <view class="content">
       <block wx:for="{{comments}}" wx:key="">
-        <comp-tag comment="{{item.content}}" nums="{{item.nums}}" />
+        <comp-tag comment="{{item.content}}">
+          <text slot="nums" class="nums">{{item.nums}}</text>
+        </comp-tag>
       </block>
     </view>
 
@@ -21,7 +25,9 @@
     <view class="title">
       <text>内容简介</text>
     </view>
-    <view class="content">{{detail.summary}}</view>
+    <view class="content">
+      <text decode="true">{{filter.backSlashFilter(detail.summary)}}</text>
+    </view>
   </view>
 
   <view class="moreInfo module">
@@ -93,5 +99,34 @@
         </view>
       </view>
     </view>
+  </view>
+</view>
+
+<view class="postContainer">
+  <view class="postFake">
+    <view class="input" bind:tap="showInputPanel">
+      <text>添加短评</text>
+    </view>
+    <comp-like count="{{likeCount}}" isLike="{{!!likeStatus}}" bind:tap="onHeartTap" />
+    <image src="../../images/share.png"></image>
+  </view>
+</view>
+
+<view class="inputPanel {{isInputPanelShow?'inputPanelShow':''}}">
+  <view class="head">
+    <input placeholder="短评最多12个字" />
+    <text bind:tap="hideInputPanel">取消</text>
+  </view>
+  <view class="body">
+    <view class="commentExample">
+      <block wx:for="{{filter.arraySlicer(comments,0,3)}}" wx:key="">
+        <comp-tag comment="{{item.content}}">
+          <text slot="nums" class="nums">{{item.nums}}</text>
+        </comp-tag>
+      </block>
+    </view>
+  </view>
+  <view class="confirm">
+    <text>确认</text>
   </view>
 </view>

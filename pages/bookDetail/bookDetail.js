@@ -11,7 +11,8 @@ Page({
     comments: [],
     detail: null,
     likeStatus: false,
-    likeCount: 0
+    likeCount: 0,
+    isInputPanelShow: false
   },
   onLoad: function(options) {
     const bookId = options.bookid
@@ -22,7 +23,7 @@ Page({
     getBookDetail(bookId).then(res => {
       console.log(res.data)
       this.setData({
-        detail:res.data
+        detail: res.data
       })
     })
 
@@ -41,25 +42,17 @@ Page({
       })
     })
   },
-  onReady: function() {
-
+  onHeartTap() {
+    console.log("💏")
   },
-  onShow: function() {
-
+  showInputPanel() {
+    this.setData({
+      isInputPanelShow: true
+    })
   },
-  onHide: function() {
-
-  },
-  onUnload: function() {
-
-  },
-  onPullDownRefresh: function() {
-
-  },
-  onReachBottom: function() {
-
-  },
-  onShareAppMessage: function() {
-
+  hideInputPanel() {
+    this.setData({
+      isInputPanelShow: false
+    })
   }
 })

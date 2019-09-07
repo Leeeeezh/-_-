@@ -1,0 +1,22 @@
+var backSlashFilter = function(text) {
+  if (!text) {
+    return
+  }
+  var regexp = getRegExp('\\\\n', 'g')
+  return text.replace(regexp, '\n&nbsp;&nbsp;&nbsp;&nbsp;')
+}
+
+var arraySlicer = function(arr, start, end) {
+  if (!start) {
+    start = 0
+  }
+  if (!end) {
+    start = 3
+  }
+  return arr.slice(start, end)
+}
+
+module.exports = {
+  backSlashFilter: backSlashFilter,
+  arraySlicer: arraySlicer
+}

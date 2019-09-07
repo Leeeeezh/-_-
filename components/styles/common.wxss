@@ -26,7 +26,7 @@
   font-size: 36rpx;
   padding: 12rpx;
   border-radius: 12rpx;
-  background-color: beige;
+  background-color: rgb(255, 229, 205);
   text-shadow: 0 0 2rpx #ccc;
 }
 

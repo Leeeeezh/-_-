@@ -1,4 +1,4 @@
 <view class="container">
   <text class="comment">{{comment}}</text>
-  <text class="nums">{{nums}}</text>
+  <slot name="nums"></slot>
 </view>
