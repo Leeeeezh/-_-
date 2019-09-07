@@ -1,5 +1,6 @@
 .container {
   background-color: #eee;
+  transition: all .2s ease-in-out;
   filter: brightness(1);
 }
 .mask{
@@ -145,13 +146,13 @@ comp-like > view {
   box-sizing: border-box;
   padding: 10rpx;
   width: 100%;
-  height: 300rpx;
+  height: 200rpx;
   position: fixed;
   bottom: -300rpx;
   left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: white;
   transition: all 0.2s ease-in-out;
@@ -183,7 +184,7 @@ comp-like > view {
   /* padding-bottom */
 }
 
-.confirm {
+/* .confirm {
   width:100%;
   display: flex;
   flex-direction: row;
@@ -193,4 +194,4 @@ comp-like > view {
   border-radius: 40rpx;
   background-color: rgb(221, 188, 158);
   font-weight: bold;
-}
+} */

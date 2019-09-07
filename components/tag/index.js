@@ -21,6 +21,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    onCommentTap() {
 
+    this.triggerEvent('commenttap',{
+      comment: this.data.comment
+    },{})
+    }
   }
 })

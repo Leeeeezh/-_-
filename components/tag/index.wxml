@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container" bind:tap="onCommentTap">
   <text class="comment">{{comment}}</text>
   <slot name="nums"></slot>
 </view>
