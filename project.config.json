@@ -40,13 +40,32 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/bookDetail/bookDetail",
+					"pathName": "pages/bookDetail/bookDetail",
+					"query": "bookid=122",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/bookDetail/bookDetail",
+					"pathName": "pages/bookDetail/bookDetail",
+					"query": "bookid=1002",
+					"scene": null
+				}
+			]
 		}
 	}
 }

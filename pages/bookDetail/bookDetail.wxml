@@ -1,3 +1,97 @@
 <view class="container">
-  <text>{{bookId}}</text>
+  <view class="basicInfo module">
+    <image class="cover" src="{{detail.image}}"></image>
+    <text class="bookTitle">{{detail.title}}</text>
+    <text class="author">{{detail.author[0]}}</text>
+  </view>
+
+  <view class="comments module">
+    <view class="title">
+      <text>短评</text>
+    </view>
+    <view class="content">
+      <block wx:for="{{comments}}" wx:key="">
+        <comp-tag comment="{{item.content}}" nums="{{item.nums}}" />
+      </block>
+    </view>
+
+  </view>
+
+  <view class="intro module">
+    <view class="title">
+      <text>内容简介</text>
+    </view>
+    <view class="content">{{detail.summary}}</view>
+  </view>
+
+  <view class="moreInfo module">
+    <view class="title">
+      <text>出版信息</text>
+    </view>
+
+    <view class="content">
+      <view class="infoItem">
+        <view class="infoName">
+          <text>出版社</text>
+        </view>
+        <view class="infoValue">
+          <text>{{detail.publisher}}</text>
+        </view>
+      </view>
+
+      <view class="infoItem">
+        <view class="infoName">
+          <text>出版时间</text>
+        </view>
+        <view class="infoValue">
+          <text>{{detail.pubdate}}</text>
+        </view>
+      </view>
+
+      <view class="infoItem">
+        <view class="infoName">
+          <text>页数</text>
+        </view>
+        <view class="infoValue">
+          <text>{{detail.pages}}</text>
+        </view>
+      </view>
+
+      <view class="infoItem">
+        <view class="infoName">
+          <text>定价</text>
+        </view>
+        <view class="infoValue">
+          <text>{{detail.price}}</text>
+        </view>
+      </view>
+
+      <view class="infoItem">
+        <view class="infoName">
+          <text>装帧</text>
+        </view>
+        <view class="infoValue">
+          <text>{{detail.binding}}</text>
+        </view>
+      </view>
+
+      <view class="infoItem">
+        <view class="infoName">
+          <text>分类</text>
+        </view>
+        <view class="infoValue">
+          <text>{{detail.category}}</text>
+        </view>
+      </view>
+
+      <view class="infoItem">
+        <view class="infoName">
+          <text>ISBN</text>
+        </view>
+        <view class="infoValue">
+          <text>{{detail.isbn}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

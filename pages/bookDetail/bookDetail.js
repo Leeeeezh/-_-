@@ -20,14 +20,14 @@ Page({
     })
 
     getBookDetail(bookId).then(res => {
-      // console.log(res.data)
+      console.log(res.data)
       this.setData({
         detail:res.data
       })
     })
 
     getLikeStatus(bookId).then(res => {
-      // console.log(res.data)
+      console.log(res.data)
       this.setData({
         likeStatus: !!res.data.likeStatus,
         likeCount: res.data.fav_nums
@@ -35,7 +35,7 @@ Page({
     })
 
     getComments(bookId).then(res => {
-      // console.log(res.data)
+      console.log(res.data)
       this.setData({
         comments: res.data.comments
       })

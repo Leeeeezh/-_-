@@ -1,1 +1,85 @@
-/* pages/bookDetail/bookDetail.wxss */
+.container {
+  background-color: #eee;
+}
+
+.module {
+  padding: 30rpx 20rpx;
+  background-color: white;
+  margin-bottom: 30rpx;
+}
+
+text {
+  color: #333;
+}
+
+.basicInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.basicInfo .cover {
+  width: 300rpx;
+  height: 450rpx;
+  box-shadow: 60rpx 0 0 -38rpx rgb(236, 234, 202);
+}
+
+.basicInfo  .bookTitle {
+  font-weight: bold;
+  font-size: 50rpx;
+  padding: 20rpx 0;
+  color: #333;
+}
+
+.basicInfo .author {
+  /* padding: 20rpx 0; */
+  color: #333;
+}
+
+.comments {
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.title text{
+  border-bottom: 6rpx solid palegoldenrod;
+}
+
+.content {
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+comp-tag > view {
+  background-color: rgb(255, 251, 211) !important;
+}
+.intro .content {
+  text-indent: 2rem;
+  line-height: 50rpx;
+}
+.moreInfo .infoItem {
+  width:100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.infoItem .infoName {
+  width:180rpx;
+}
+
+.infoItem .infoName text{
+  color: #aaa;
+}

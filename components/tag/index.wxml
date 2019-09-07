@@ -1,0 +1,4 @@
+<view class="container">
+  <text class="comment">{{comment}}</text>
+  <text class="nums">{{nums}}</text>
+</view>

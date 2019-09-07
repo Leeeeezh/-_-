@@ -1,0 +1,18 @@
+.container {
+  width: fit-content;
+  padding: 2rpx 8rpx;
+  border-radius: 4rpx;
+  margin: 6rpx;
+  background-color: #eee;
+  display: flex;
+  align-items: flex-start;
+}
+
+.comments {
+  color:#333;
+}
+
+.nums {
+  color: #555;
+  font-size: 20rpx;
+}
