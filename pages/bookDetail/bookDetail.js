@@ -14,43 +14,68 @@ Page({
   data: {
     bookId: 0,
     comments: [],
-    detail: null,
+    detail: {
+      image: '',
+      title: '加载中',
+      author: ['加载中'],
+      summary: '加载中',
+      publisher: '加载中',
+      pubdate: '加载中',
+      pages: '加载中',
+      price: '加载中',
+      binding: '加载中',
+      category: '加载中',
+      isbn: '加载中'
+    },
     likeStatus: false,
     likeCount: 0,
     isInputPanelShow: false
   },
   // 页面加载
-  onLoad: async function(options) {
+  onLoad: function(options) {
+    wx.showLoading({
+      title: '加载中',
+    })
     const bookId = options.bookid
     this.setData({
       bookId
     })
 
-    const res = await getBookDetail(bookId)
-    this.setData({
-      detail: res.data
+    const bookDetail = getBookDetail(bookId)
+    const likeStatus = getLikeStatus(bookId)
+    const comments = getComments(bookId)
+    //Promise.race()
+    Promise.all([bookDetail, comments, likeStatus]).then(res => {
+      console.log(res)
+      this.setData({
+        detail: res[0].data,
+        comments: res[1].data.comments,
+        likeStatus: !!res[2].data.like_status,
+        likeCount: res[2].data.fav_nums
+      })
+      wx.hideLoading()
     })
-    // .then(res => {
+
+    // bookDetail.then(res => {
     //   console.log(res.data)
     //   this.setData({
     //     detail: res.data
     //   })
     // })
 
-    getLikeStatus(bookId).then(res => {
-      console.log(res.data)
-      this.setData({
-        likeStatus: !!res.data.like_status,
-        likeCount: res.data.fav_nums
-      })
-    })
+    // comments.then(res => {
+    //   this.setData({
+    //     comments: res.data.comments
+    //   })
+    // })
 
-    getComments(bookId).then(res => {
-      console.log(res.data)
-      this.setData({
-        comments: res.data.comments
-      })
-    })
+    // likeStatus.then(res => {
+    //   this.setData({
+    //     likeStatus: !!res.data.like_status,
+    //     likeCount: res.data.fav_nums
+    //   })
+    // })
+
   },
 
   //  收藏/取消收藏事件

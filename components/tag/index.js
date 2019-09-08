@@ -7,7 +7,7 @@ Component({
     multipleSlots: true
   },
   properties: {
-    comment: String
+    text: String
   },
 
   /**
@@ -21,10 +21,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onCommentTap() {
+    onTagTap() {
 
-    this.triggerEvent('commenttap',{
-      comment: this.data.comment
+    this.triggerEvent('tagtap',{
+      text: this.data.text
     },{})
     }
   }

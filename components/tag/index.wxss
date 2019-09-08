@@ -8,6 +8,6 @@
   align-items: flex-start;
 }
 
-.comments {
+.text {
   color:#333;
 }

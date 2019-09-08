@@ -1,8 +1,12 @@
 <view class="container">
-  <view class="searchBar">
-    <comp-search/>
+  <comp-search wx:if="{{isSearching}}" bind:hide="hideSearchPanel" flag="{{flag}}"/>
+  <view class="search" bind:tap="showSearchPanel" wx:if="{{!isSearching}}">
+    <view class="searchBar">
+      <image src="./images/search.png"></image>
+      <text>搜索图书</text>
+    </view>
   </view>
-  <view class="books">
+  <view class="books" wx:if="{{!isSearching}}">
     <view class="titleWrap">
       <text class="title">热门</text>
     </view>

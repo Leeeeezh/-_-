@@ -13,7 +13,7 @@
     </view>
     <view class="content">
       <block wx:for="{{filter.arraySlicer(comments,0,20)}}" wx:key="">
-        <comp-tag comment="{{item.content}}">
+        <comp-tag text="{{item.content}}">
           <text slot="nums" class="nums">{{item.nums}}</text>
         </comp-tag>
       </block>
@@ -120,7 +120,7 @@
   <view class="body">
     <view class="commentExample">
       <block wx:for="{{filter.arraySlicer(comments,0,3)}}" wx:key="">
-        <comp-tag comment="{{item.content}}" bind:commenttap="onCommentSubmit">
+        <comp-tag text="{{item.content}}" bind:tagtap="onCommentSubmit">
           <text slot="nums" class="nums">{{item.nums}}</text>
         </comp-tag>
       </block>

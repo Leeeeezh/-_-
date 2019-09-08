@@ -1,12 +1,41 @@
 <view class="container">
-  <!-- <label for="book"> -->
-    <view class="search">
-      <view class="wrap">
-        <image class="searchIcon" src="images/search.png" />
-        <input name="book" placeholder="搜索图书" bind:tap="activateSearchPanel"></input>
-      </view>
-      <image class="clearIcon" hidden="{{!isSearching}}" src="images/cancel.png" bind:tap="activateSearchPanel"/>
+  <view class="header">
+    <view class="searchBar">
+      <image class="searchIcon" src="./images/search.png"></image>
+      <input value="{{keyword}}" placeholder="" bind:confirm="inputConfirm" auto-focus="{{true}}"></input>
+      <image class="cancelIcon" src="./images/cancel.png" bind:tap="clear"></image>
     </view>
-    <view class="cancel" hidden="{{!isSearching}}" bind:tap="deactivateSearchPanel">取消</view>
-  <!-- </label> -->
+    <view class="cancel" bind:tap="hideSearchPanel">取消</view>
+  </view>
+
+  <view class="body">
+    <view wx:if="{{!isSearching}}" class="searchRecord">
+      <view class="history">
+        <view class="title">历史搜索</view>
+        <view class="content">
+          <text class="loading" wx:if="{{history.length===0}}">尚无历史搜索记录</text>
+          <block wx:for="{{history}}" wx:key="">
+            <comp-tag text="{{item}}" bind:tagtap="inputConfirm" />
+          </block>
+        </view>
+
+      </view>
+      <view class="hot">
+        <view class="title">热门搜索</view>
+        <view class="content">
+          <text class="loading" wx:if="{{hot.length===0}}">加载中</text>
+          <block wx:for="{{hot}}" wx:key="">
+            <comp-tag text="{{item}}" bind:tagtap="inputConfirm" />
+          </block>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{isSearching}" class="result">
+      <block wx:for="{{result}}" wx:for-item="item" wx:key="item.id">
+        <comp-book bookInfo="{{item}}" />
+      </block>
+    </view>
+  </view>
+
 </view>

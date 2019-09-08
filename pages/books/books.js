@@ -3,18 +3,27 @@ import {
   getHotBookData
 } from '../../modules/getBookData.js'
 
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    bookList: []
+    bookList: [],
+    isSearching: false,
+    flag: ''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  showSearchPanel(){
+    this.setData({
+      isSearching: true
+    })
+  },
+  hideSearchPanel(){
+    this.setData({
+      isSearching: false
+    })
+  },
   onLoad: function(options) {
     let hotBooks = wx.getStorageSync('hotBooks')
     if(hotBooks){
@@ -73,7 +82,10 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-
+    const flag = Math.random().toString()
+    this.setData({
+      flag: flag
+    })
   },
 
   /**
