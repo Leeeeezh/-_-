@@ -3,11 +3,13 @@
     <comp-episode class="episode" _index="{{index}}" />
     <view class="btns">
       <comp-like class="like" count="{{fav_nums}}" isLike="{{like_status===1?true:false}}" bind:hearttap="onHeartTap" />
-      <image class="share" src="../../images/share.png"></image>
+      <comp-authbtn openType="share">
+        <image class="share" src="../../images/share.png" slot="img"></image>
+      </comp-authbtn>
     </view>
   </view>
   <comp-movie wx:if="{{type===100}}" imageURL="{{image}}" content="{{content}}" />
-  <comp-music wx:if="{{type===200}}" imageURL="{{image}}" content="{{content}}" musicSrc="{{url}}" title="{{title}}"/>
-  <comp-essay wx:if="{{type===300}}" imageURL="{{image}}" content="{{content}}"/>
+  <comp-music wx:if="{{type===200}}" imageURL="{{image}}" content="{{content}}" musicSrc="{{url}}" title="{{title}}" />
+  <comp-essay wx:if="{{type===300}}" imageURL="{{image}}" content="{{content}}" />
   <comp-handler class="handler" title="{{title}}" latest="{{index===latestIndex}}" earliest="{{index===earliestIndex}}" bind:next="onNextTap" bind:prev="onPrevTap" />
 </view>

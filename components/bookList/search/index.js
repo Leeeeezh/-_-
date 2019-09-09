@@ -15,6 +15,10 @@ Component({
     flag: {
       type: String,
       observer: function(){
+        if(!this.data.keyword || this.data.isRequesting){
+          return
+        }
+        this.data.isRequesting = true
         wx.showLoading({
           title: '正在拼命加载中',
         })
@@ -24,7 +28,10 @@ Component({
             result: this.data.result.concat(res.data.books),
             currentIndex: this.data.currentIndex + 20
           })
+          this.data.isRequesting = false
           wx.hideLoading()
+        },err=>{
+          this.data.isRequesting = false
         })
       }
     }
@@ -36,7 +43,8 @@ Component({
     result: [],
     isSearching: false,
     keyword: '',
-    currentIndex: 0
+    currentIndex: 0,
+    isRequesting: false
   },
   attached() {
     this.setData({
@@ -63,10 +71,6 @@ Component({
     },
     inputConfirm(event) {
       const q = event.detail.value || event.detail.text
-      this.setData({
-        isSearching: true,
-        keyword: q
-      })
       if(!q){
         wx.showToast({
           title: '搜索关键词不能为空哦',
@@ -75,6 +79,10 @@ Component({
         })
         return
       }
+      this.setData({
+        isSearching: true,
+        keyword: q
+      })
       wx.showLoading({
         title: '正在搜索',
       })

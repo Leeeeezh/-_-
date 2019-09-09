@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/books/books",
     "pages/classic/classic",
-    "pages/collections/collections",
-    "pages/bookDetail/bookDetail"
+    "pages/books/books",
+    "pages/bookDetail/bookDetail",
+    "pages/collections/collections"
   ],
   "window": {
     "backgroundTextStyle": "light",

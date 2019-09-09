@@ -7,6 +7,10 @@ Component({
     isLike: {
       type: Boolean,
       value: false
+    },
+    clickable: {
+      type: Boolean,
+      value: true
     }
   },
   data: {
@@ -15,6 +19,9 @@ Component({
   },
   methods: {
     onLikeTap(event) {
+      if(!this.data.clickable){
+        return
+      }
       let count = this.properties.count
       let isLike = this.properties.isLike
       if (!isLike) {

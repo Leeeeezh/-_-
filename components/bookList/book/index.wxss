@@ -3,10 +3,11 @@
   height:450rpx;
   border-radius:6rpx;
   margin-bottom: 40rpx;
-  background-color: #fff;
+  background-color: #f0f0f0;
   /* box-shadow: 0 0 10rpx #eee; */
   position: relative;
-  box-shadow: 30rpx 0 0 -18rpx rgb(236, 234, 202);
+  /* box-shadow: 30rpx 0 0 -18rpx rgb(236, 234, 202); */
+  box-shadow: 0 0 10rpx #ccc;
   overflow: hidden;
 }
 

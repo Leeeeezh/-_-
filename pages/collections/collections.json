@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "comp-card": "../../components/card/index",
+    "comp-authbtn": "../../components/authbtn/index"
+  }
 }

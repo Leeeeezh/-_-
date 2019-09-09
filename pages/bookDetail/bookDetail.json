@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "comp-tag": "../../components/tag/index",
-    "comp-like": "../../components/like/index"
+    "comp-like": "../../components/like/index",
+    "comp-authbtn": "../../components/authbtn"
   }
 }

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="title">
+    <text class="type">{{typeMap[type]}}</text>
+    <comp-like isLike="{{true}}" count="{{count}}" clickable="{{false}}"/>
+  </view>
+
+  <view class="image">
+    <image src="{{image}}"></image>
+  </view>
+
+  <view class="text">
+    <text>{{text}}</text>
+  </view>
+</view>

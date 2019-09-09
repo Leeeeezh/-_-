@@ -93,8 +93,8 @@ Page({
   },
   //  提交短评
   onCommentSubmit(event) {
-    const comment = event.detail.comment || event.detail.value
-    if (comment.length > 12) {
+    const text = event.detail.text || event.detail.value
+    if (text.length > 12) {
       wx.showToast({
         title: '短评最多12个字哦',
         icon: 'none',
@@ -103,10 +103,10 @@ Page({
       return
     }
 
-    postComment(this.data.bookId, comment)
+    postComment(this.data.bookId, text)
     this.hideInputPanel()
     this.data.comments.unshift({
-      content: comment,
+      content: text,
       nums: 1
     })
     this.setData({

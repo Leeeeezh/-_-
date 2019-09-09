@@ -108,13 +108,15 @@
       <text>添加短评</text>
     </view>
     <comp-like count="{{likeCount}}" isLike="{{!!likeStatus}}" bind:hearttap="onHeartTap" />
-    <image src="../../images/share.png"></image>
+    <comp-authbtn openType="share">
+      <image src="../../images/share.png" slot="img"></image>
+    </comp-authbtn>
   </view>
 </view>
 
 <view class="inputPanel {{isInputPanelShow?'inputPanelShow':''}}">
   <view class="head">
-    <input placeholder="短评最多12个字" bind:confirm="onCommentSubmit"/>
+    <input placeholder="短评最多12个字" bind:confirm="onCommentSubmit" />
     <text bind:tap="hideInputPanel">取消</text>
   </view>
   <view class="body">
@@ -126,7 +128,4 @@
       </block>
     </view>
   </view>
-  <!-- <view class="confirm">
-    <text>确认</text>
-  </view> -->
 </view>
