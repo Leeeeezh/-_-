@@ -16,7 +16,7 @@
 }
 
 .authAvatar image{
-  border-radius: 50%;
+  border-radius: 6rpx;
 }
 
 .header {

@@ -37,6 +37,7 @@
   margin-left: 20rpx;
   width: 30rpx;
   height: 30rpx;
+  padding: 10rpx;
 }
 
 .handler {
